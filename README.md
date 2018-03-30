@@ -35,7 +35,7 @@ docker exec -it ssh_tmux /bin/bash
 ```
 then: su student; and start tmux.
 
-if its already running and you want rw:
+If its already running and you want rw:
 ```
 su student zsh -c "tmux a”
 ```
