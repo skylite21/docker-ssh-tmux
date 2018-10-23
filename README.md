@@ -1,6 +1,6 @@
 # ssh-tmux
 
-This is what I use with my students for sharing my session to them
+This is what I use with my students for sharing my session with them
 This creates a docker container running ssh exposed on port 443. 
 Remember to stop the container, and change the settings to your needs
 By default you can connect with:
@@ -13,7 +13,7 @@ If you connect trough ssh and tmux is already running, you'll be automatically
 attached to that session
 
 # Usage
-To build:
+Build the image
 ```
 docker build -t=ssh_tmux . 
 ```
@@ -39,3 +39,5 @@ If its already running and you want rw:
 ```
 su student zsh -c "tmux a”
 ```
+
+As student, use the connect as student.lnk file (just right click and edit the IP)

@@ -34,5 +34,10 @@ RUN /usr/bin/ssh-keygen -A ;\
         locale-gen; \
         mkdir -p /var/run/sshd
 
+RUN chown root:root /home/student/.tmux.conf; \
+      chown root:root /home/student/.zshrc; \
+      chmod 644 /home/student/.tmux.conf; \
+      chmod 644 /home/student/.zshrc; 
+
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
