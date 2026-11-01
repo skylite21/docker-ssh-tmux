@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:26.04
 
 # to build
 # docker build -t=ssh_tmux .
@@ -17,7 +17,7 @@ FROM ubuntu
 # username : student
 # password : student1
 
-RUN apt-get update && apt-get install -y vim man tmux zsh openssh-server locales
+RUN apt-get update && apt-get install -y vim man-db tmux zsh openssh-server locales
 RUN useradd -m student; \
         chsh -s $(which zsh) student; \
         echo "student:student1" | chpasswd
